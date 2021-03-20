@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Shoaib Alyaan Portfolio",
+    siteUrl:`https://shodevacc.github.io/`,
     description: `A website about Shoaib Alyaan. It includes his academic work, other projects, work experience information, resume, and contact information`,
     author: `@shoaibalyaan`,
   },
@@ -11,7 +12,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.png",
+        icon: "src/images/SHO.svg",
       },
     },
     "gatsby-plugin-sharp",
