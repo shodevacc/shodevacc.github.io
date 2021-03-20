@@ -1,0 +1,77 @@
+.container {
+  z-index: -1;
+  position: relative;
+  height: 100px;
+}
+.moving1 {
+  height: 100%;
+  animation: move1 4s ease-in-out 0s infinite alternate none running;
+}
+.moving2 {
+  height: 100%;
+  animation: move2 5s ease-in-out 0s infinite alternate none running;
+}
+.back {
+  position: absolute;
+  width: 15px;
+  stroke: currentcolor;
+  fill: none;
+  color: var(--cinnabar);
+}
+.moving1 .back:first-child {
+  top: 25%;
+  left: 5%;
+  width: 10%;
+}
+.moving1 .back:nth-child(2) {
+  top: 100%;
+  left: 50%;
+  width: 15%;
+}
+.moving1 .back:nth-child(3) {
+  top: 0;
+  left: 75%;
+  width: 5%;
+}
+.moving1 .back:nth-child(4) {
+  top: -15%;
+  left: 60%;
+  width: 5%;
+}
+.moving1 .back:nth-child(5) {
+  top: -40%;
+  left: 30%;
+  width: 5%;
+}
+.moving2 .back:first-child {
+  top: 0;
+  left: 10%;
+  width: 4%;
+}
+.moving2 .back:nth-child(2) {
+  top: -60%;
+  left: 30%;
+  width: 5%;
+  color: var(--cinnabar);
+}
+.moving2 .back:nth-child(3) {
+  top: -5%;
+  left: 70%;
+  width: 5%;
+}
+@keyframes move1 {
+  0% {
+    transform: translateY(30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes move2 {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100px);
+  }
+}

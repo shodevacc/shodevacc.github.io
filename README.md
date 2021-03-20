@@ -1,48 +1,40 @@
+<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
+    <img alt="Sho-Icon" src="/src/images/SHO.svg" width="60" />
 </p>
 <h1 align="center">
-  Gatsby minimal starter
+  Shoaib Alyaan's Website
 </h1>
+Hello! This is the website I made to showcase my modern web-development skills along with information about myself. I have included my Academic projects, work experience, freelance projects, resume and contact information.
 
-## 🚀 Quick start
+## 🚀 Here's a look at how I made this website and why I choose these technologies.
 
-1.  **Create a Gatsby site.**
+1.  **GATSBY**
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+    I used the React framework, **Gatsby**, to build this website as it is known for creating extremely fast loading static sites. I enjoyed working with this framework and would encourage anyone reading this to give **Gatsby** a try as it has a lot of features which makes the mundane tasks related to Web-Development less annoying. (Like image optimisation using **gatsby-image**).
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+    The added benefit of having starter templates, which gives your project a well defined structure: attractive to beginners.
 
-2.  **Start developing.**
+    ooh it also has **SEO** built in 🎉🎉
 
-    Navigate into your new site’s directory and start it up.
+    This is the default starter I used.
 
     ```shell
-    cd my-gatsby-site/
-    npm run develop
+    # create a new Gatsby site using the default starter
+    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
     ```
 
-3.  **Open the code and start customizing!**
+2.  **NO Bootstrap/Reused Code**
 
-    Your site is now running at http://localhost:8000!
+    All the HTML, CSS and javascript used in this project has been **written by me**. I **did not use** any pre-existing CSS framework or ready-made components as I wanted this to be a showcase of my strong fundamental knowledge.
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+3.  **gh-pages**
 
-4.  **Learn more**
+    I used the gh-pages package to automate my production build and deployment process. The command can be seen in the Package.json file named "deploy".
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+    ```shell
+    # Build and Deploy the production build to my gh-pages branch
+    gatsby build && gh-pages -b gh-pages -d public
+    ```
 
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+## Cheers 🍻 🍻

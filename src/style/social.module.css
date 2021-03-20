@@ -1,0 +1,41 @@
+.list {
+  list-style: none;
+  position: absolute;
+  top: 7.5rem;
+  left: 0%;
+  margin: 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+.icon {
+  height: 3rem;
+  width: 3rem;
+  margin: 0 1rem;
+}
+.icon:nth-child(2n) a {
+  fill: #f9cec8;
+}
+@media (min-width: 568px) {
+  .list {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 0;
+    width: var(--outer-margin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .icon {
+    margin: 1rem 0;
+  }
+  .icon:nth-child(2n) a {
+    fill: var(--cinnabar);
+  }
+}

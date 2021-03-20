@@ -1,0 +1,11 @@
+.animate {
+    animation: blink 0.5s linear infinite alternate;
+  }
+  @keyframes blink {
+    0% {
+      border-color: transparent;
+    }
+    to {
+      border-color: #000;
+    }
+  }

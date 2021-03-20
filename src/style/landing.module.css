@@ -1,0 +1,228 @@
+:root {
+  --outer-margin: 4rem;
+  --rightIconIndex: 8;
+}
+
+.NavContainer {
+  top: 90px;
+  left: 8vw;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 85vw;
+  justify-content: space-between;
+}
+.mainContainer {
+  margin: 0;
+  overflow: hidden;
+  background-color: #f08080;
+}
+.contentContainer,
+.contentLeftContainer,
+.contentRightContainer {
+  height: 100vh;
+  min-height: 60rem;
+  width: 300vw;
+  display: flex;
+  transition: 1s ease;
+  background-color: var(--ivory);
+  position: relative;
+}
+.contentContainer {
+  transform: translate3d(-100vw, 0, 0);
+}
+.contentCenter,
+.contentLeft,
+.contentRight {
+  max-width: 100vw;
+  width: 100%;
+}
+.contentCenter {
+  background-color: pink;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.contentCenter:after,
+.contentCenter:before {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+}
+.contentCenter:before {
+  content: "";
+  background-color: var(--cinnabar);
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 0;
+  max-width: 50%;
+  bottom: 0;
+}
+.contentCenter:after {
+  content: "";
+  background-color: var(--onyx);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  color: var(--cinnabar);
+}
+.contentLeft {
+  background-color: var(--cinnabar);
+}
+.contentRight {
+  background-color: var(--onyx);
+}
+
+.rightIcon,
+.reverseRightIcon {
+  display: inline;
+  width: 30px;
+  /* height:30px; */
+  z-index: var(--rightIconIndex);
+  color: red;
+}
+.rightBar {
+  width: 35px;
+  height: 3px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.rightIcon > .rightBar1 {
+  transform: translate(5px, -5px) rotate(45deg);
+  width: 17px;
+}
+.rightIcon > .rightBar3 {
+  transform: translate(5px, 5px) rotate(-45deg);
+  width: 17px;
+}
+.reverseRightIcon > .rightBar1 {
+  transform: translate(-20px, -5px) rotate(-45deg);
+  width: 17px;
+}
+.reverseRightIcon > .rightBar3 {
+  transform: translate(-20px, 5px) rotate(45deg);
+  width: 17px;
+}
+
+.contentText {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin: 7rem 0 0 0;
+}
+.contentText h1 {
+  font-size: 7vw;
+  font-family: monospace;
+  color: var(--cinnabar);
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 10px solid #000;
+}
+.contentLeft .contentText h1 {
+  font-size: 7vw;
+  color: #000;
+}
+
+.data {
+  font-size: 13px;
+  font-weight: 800;
+  transition: 0.2s ease;
+  color: #fff;
+  opacity: 1;
+  line-height: 1.2;
+  transform: translate(-5%, 0);
+  width: 80%;
+  text-align: justify;
+}
+/* .hideData {
+  font-size: 3vw;
+  transition: 0.2s ease;
+  color: #fff;
+  transform: translateY(50%);
+  opacity: 0;
+} */
+.centerText {
+  z-index: 1;
+}
+.centerText > * {
+  font-size: 14rem;
+  font-weight: 800;
+  color: var(--ivory);
+}
+.skillsContainer {
+  list-style: none;
+  display: flex;
+  width: 85%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 0 0 15px 0;
+}
+.skillsContainer li {
+  background: rgba(255, 255, 255, 0.719);
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 700;
+  font-size: 11px;
+  margin: 5px;
+}
+@media only screen and (min-width: 568px) {
+  .NavContainer {
+    width: calc(100vw - var(--outer-margin) * 3);
+  }
+  .mainContainer {
+    margin: var(--outer-margin) var(--outer-margin) 0 var(--outer-margin);
+    overflow: hidden;
+    background-color: #f08080;
+  }
+  .data,
+  .hideData {
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 800;
+  }
+  .contentCenter:before {
+    max-width: calc(50% - var(--outer-margin) / 2);
+  }
+  .contentCenter:after {
+    width: calc(50% + var(--outer-margin) / 2);
+  }
+  .contentText {
+    width: calc(100vw - (var(--outer-margin) * 2));
+  }
+  .skillsContainer li {
+    background: rgba(255, 255, 255, 0.719);
+    border-radius: 5px;
+    padding: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 5px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .NavContainer {
+    width: calc(100vw - var(--outer-margin) * 4);
+  }
+  .mainContainer {
+    overflow: hidden;
+    background-color: #f08080;
+  }
+  .contentText h1 {
+    font-size: 7rem;
+  }
+}

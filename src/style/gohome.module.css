@@ -1,0 +1,45 @@
+.container {
+  font-size: 30px;
+  width: 100vw;
+  height: 100px;
+  background-color: var(--cinnabar);
+}
+.NavBar {
+  position: relative;
+  top: 50px;
+  left: 8vw;
+  width: calc(100% - var(--outer-margin));
+}
+.SHO {
+  height: 10vw;
+  min-height: 60px;
+  max-height: 70px;
+  width: 100px;
+}
+.home {
+  text-align: center;
+  top: -30px;
+  left: 0;
+  position: relative;
+  font-size: 24px;
+}
+@media only screen and (min-width: 500px) {
+  .home {
+    left: -5vw;
+  }
+}
+@media only screen and (min-width: 568px) {
+  .home {
+    font-size: 32px;
+  }
+  .NavBar {
+    position: relative;
+    top: 50px;
+    left: var(--outer-margin);
+    width: calc(100% - var(--outer-margin));
+  }
+  .SHO {
+    height: 6vw;
+    width: 100px;
+  }
+}

@@ -1,0 +1,241 @@
+:root {
+  --BgOpeningTime: 0.8s;
+  --BgClosingTime: 0.5s;
+  --BgOpeningDelay: 0s;
+  --BgClosingDelay: 0.3s;
+  --closeBG: var(--dark-blue);
+  --menu-index: 9;
+  --NavListOpeningTime: 0.3s;
+  --NavListClosingTime: 0.3s;
+  --NavListOpeningDelay: 0.8s;
+  --NavListClosingDelay: 0s;
+  --slide-delay: 1s;
+  --NavListIndex: 10;
+  --ToggleIconChangeTime: 0.3s;
+  --ToggleIconOpeningDelay: 0s;
+  --ToggleIconClosingDelay: 0.6s;
+  --openIconColor: #000;
+  --CloseIconColor: #fff;
+  --ToggleIconIndex: 11;
+}
+.container {
+  width: 100px;
+  display: inline;
+}
+.openIcon,
+.closeIcon {
+  z-index: var(--ToggleIconIndex);
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  left: 0;
+  height: 30px;
+  width: 35px;
+  padding: 0 5px;
+  transition: 0.1s ease;
+}
+.openIcon:hover,
+.closeIcon:hover {
+  transition: 0.1s ease;
+  padding: 0 2px;
+}
+.bar {
+  height: 3px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #000;
+  z-index: 10;
+}
+.openIcon > .bar {
+  transition: var(--ToggleIconChangeTime) ease;
+  transition-delay: var(--ToggleIconClosingDelay);
+  background-color: var(--openIconColor);
+}
+
+.openIcon > .bar1 {
+  transform: translateY(-4px);
+}
+.openIcon > .bar2 {
+  opacity: 1;
+}
+.openIcon > .bar3 {
+  transform: translateY(4px);
+}
+
+.closeIcon > .bar {
+  transition: var(--ToggleIconChangeTime) ease;
+  transition-delay: var(--ToggleIconOpeningDelay);
+  background-color: var(--CloseIconColor);
+}
+
+.closeIcon > .bar1 {
+  transform: translateY(4px) rotate(-45deg);
+}
+.closeIcon > .bar2 {
+  opacity: 0;
+}
+.closeIcon > .bar3 {
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.openIcon {
+  animation: side2side 1s infinite;
+}
+
+@keyframes side2side {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.itemContainer {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 10;
+  margin: 0;
+  display: flex;
+}
+
+.itemsInvisible,
+.itemsVisible {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  list-style: none;
+  z-index: var(--NavListIndex);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 100px auto;
+}
+.itemsVisible {
+  opacity: 1;
+  transition: all var(--NavListOpeningTime) ease;
+  transition-delay: var(--NavListOpeningDelay);
+}
+.itemsInvisible {
+  transition: all var(--NavListClosingTime) ease;
+  transition-delay: var(--NavListClosingDelay);
+}
+
+.navTitle {
+  font-size: 14px;
+  position: relative;
+}
+.navTitle::after,
+.navTitle::before {
+  content: "";
+  height: 2px;
+  width: 50%;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+}
+.navTitle::before {
+  left: -60%;
+}
+.navTitle::after {
+  right: -60%;
+}
+.itemsVisible .navTitle {
+  color: #fff;
+  transition: all 0.3s ease;
+  transition-delay: var(--NavListOpeningDelay);
+  opacity: 1;
+}
+.itemsInvisible .navTitle {
+  color: #fff;
+  transition: all 0.3s ease;
+  transition-delay: var(--NavListClosingDelay);
+  opacity: 0;
+}
+
+.item {
+  color: #fff;
+  transition: all 0.3s ease;
+  transform: translate(50px);
+  opacity: 0;
+}
+.itemsVisible .item {
+  /* transform: translate(0px); */
+  opacity: 1;
+}
+.item h2 {
+  font-size: 7vw;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: #f5f5f5;
+}
+.item:hover h2 {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+  color: #000;
+  background-color: #f5f5f5;
+}
+
+.openBG,
+.closeBG {
+  background-color: var(--closeBG);
+  position: absolute;
+  top: 2%;
+  left: 6%;
+  z-index: var(--menu-index);
+  border-radius: 50%;
+  transform: translate3d(-30%, -40%, 0);
+}
+.closeBG {
+  width: 0;
+  height: 0;
+  transition: var(--BgClosingTime) ease;
+  transition-delay: var(--BgClosingDelay);
+}
+.openBG {
+  height: 190vmax;
+  width: 190vmax;
+  transition: var(--BgOpeningTime) ease;
+  transition-delay: var(--BgOpeningDelay);
+}
+@media only screen and (min-width: 500px) {
+  .navTitle {
+    font-size: 14px;
+  }
+  .navTitle::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: -120%;
+  }
+  .navTitle::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    right: -120%;
+  }
+  .item h2 {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .navTitle {
+    font-size: 16px;
+  }
+  .item h2 {
+    font-size: 3.5rem;
+  }
+}

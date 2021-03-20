@@ -1,0 +1,50 @@
+.container {
+  width: 100vw;
+  padding: 15px;
+}
+.container ul {
+  font-size: 14px;
+  list-style-type: lower-alpha;
+  margin-left: 10px;
+}
+.container ul ul {
+  font-size: 14px;
+  list-style-type: disc;
+  font-weight: 500;
+  margin-left: 10px;
+}
+.container p {
+  margin: 20px 0;
+  text-align: justify;
+  line-height: 1.4;
+}
+.container h2 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 32px;
+  text-shadow: 2px 2px #000;
+  color: var(--cinnabar);
+}
+.float {
+  display: flex;
+  flex-direction: column;
+}
+.figName {
+  text-align: center !important;
+  font-size: 12px;
+}
+@media only screen and (min-width: 768px) {
+  .float {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 50%;
+    justify-content: center;
+  }
+  .float div:first-of-type {
+    flex-basis: 40%;
+    margin-right: 20px;
+  }
+  .float div:last-child {
+    flex-basis: 50%;
+  }
+}

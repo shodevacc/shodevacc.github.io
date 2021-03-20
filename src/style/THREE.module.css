@@ -1,0 +1,51 @@
+.space {
+  height: 100vh;
+  width: 100vw;
+  background: radial-gradient(
+    at 50% 100%,
+    #873740 0%,
+    #272730 40%,
+    #171720 80%,
+    #070710 100%
+  );
+}
+.loading {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: #171717;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loadingBarContainer {
+  width: 200px;
+  height: 3px;
+  background: #272727;
+}
+
+.loadingBar {
+  height: 3px;
+  background: white;
+}
+
+.spaceText {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 7rem;
+  font-weight: 800;
+  top: 70%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  font-family: "Josefin Sans", sans-serif;
+  color: peru;
+  z-index: 1;
+}
+@media (min-width: 568px) {
+  .spaceText {
+    font-size: 8rem;
+  }
+}

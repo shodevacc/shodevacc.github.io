@@ -1,0 +1,58 @@
+.container{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.stars{
+    height: 100%;
+    width: 100%;
+}
+
+.stars circle:nth-child(2n){
+    animation: sparkle .3s linear infinite alternate;
+}
+.stars circle:nth-child(3n){
+    animation: sparkle .8s linear infinite alternate;
+}
+.shootingStar{
+    position: absolute;
+    top:100px;
+    left: 100px;
+    width: 100px;
+    height: 2px;
+    opacity: 0;
+    background: linear-gradient(-45deg,white,rgba(0,0,0,0));
+    filter: drop-shadow(0 0 6px white);
+    transform: translate3d(-10%,-10%,0) rotate(130deg);
+    animation: fall 10s linear infinite;
+    /* Fall for 1s and pause for 9s */
+}
+@keyframes sparkle{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fall{
+    0%{
+        width: 150px;
+        opacity: 1;
+        transform: translate3d(0,0,0) rotate(135deg);
+    }
+    10%{
+        width: 0px;
+        opacity: 0;
+        transform: translate3d(-350px,350px,0) rotate(135deg);
+    }
+    100%{
+        width: 0px;
+        opacity: 0;
+        transform: translate3d(-350px,350px,0) rotate(135deg);
+    }
+}

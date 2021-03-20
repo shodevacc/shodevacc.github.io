@@ -1,0 +1,102 @@
+.text {
+  height: 150px;
+  width: 150px;
+  animation: fillWhite 0.3s ease 3s forwards;
+}
+.textEnd {
+  height: 65px;
+  width: 25px;
+  animation: fillRed 0.3s ease 3s forwards;
+}
+.text path:first-child {
+  stroke-dasharray: 1085.5;
+  stroke-dashoffset: 1085.5;
+  animation: line-anim 2s ease forwards;
+}
+.text path:nth-child(2) {
+  stroke-dasharray: 1030.8;
+  stroke-dashoffset: 1030.8;
+  animation: line-anim 2s ease 0.3s forwards;
+}
+.text path:nth-child(3) {
+  stroke-dasharray: 680;
+  stroke-dashoffset: 680;
+  animation: line-anim 2s ease 0.6s forwards;
+}
+.text path:nth-child(4) {
+  stroke-dasharray: 680;
+  stroke-dashoffset: 680;
+  animation: line-anim 2s ease 0.9s forwards;
+}
+.text path:nth-child(5) {
+  stroke-dasharray: 973.8;
+  stroke-dashoffset: 973.8;
+  animation: line-anim 2s ease 1.2s forwards;
+}
+.text path:nth-child(6) {
+  stroke-dasharray: 973.8;
+  stroke-dashoffset: 973.8;
+  animation: line-anim 2s ease 1.6s forwards;
+}
+.textEnd path {
+  stroke-dasharray: 527.7;
+  stroke-dashoffset: 527.7;
+  animation: line-anim 2s ease 1.8s forwards;
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fillWhite {
+  0% {
+    fill: transparent;
+  }
+  to {
+    fill: #fff;
+  }
+}
+@keyframes fillRed {
+  0% {
+    fill: transparent;
+  }
+  to {
+    fill: var(--cinnabar);
+  }
+}
+@media only screen and (min-width: 568px) {
+  .text {
+    height: 20rem;
+    width: 17rem;
+    animation: fillWhite 0.3s ease 3s forwards;
+  }
+  .textEnd {
+    height: 8.5rem;
+    width: 4.5rem;
+    animation: fillRed 0.3s ease 3s forwards;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .text {
+    height: 22rem;
+    width: 19rem;
+    animation: fillWhite 0.3s ease 3s forwards;
+  }
+  .textEnd {
+    height: 9rem;
+    width: 5rem;
+    animation: fillRed 0.3s ease 3s forwards;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .text {
+    height: 25rem;
+    width: 22rem;
+    animation: fillWhite 0.3s ease 3s forwards;
+  }
+  .textEnd {
+    height: 10rem;
+    width: 6rem;
+    animation: fillRed 0.3s ease 3s forwards;
+  }
+}

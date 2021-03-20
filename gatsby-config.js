@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Shoaib Alyaan Portfolio",
+    description: `A website about Shoaib Alyaan. It includes his academic work, other projects, work experience information, resume, and contact information`,
+    author: `@shoaibalyaan`,
   },
   plugins: [
     "gatsby-plugin-image",
