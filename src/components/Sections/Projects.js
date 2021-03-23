@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react"
-import Section from "./Section"
-import SHO from "../images/SHO.svg"
+import Section from "../Section"
+import SHO from "../../images/SHO.svg"
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as styles from "../style/projects.module.css"
+import * as styles from "../../style/projects.module.css"
 
 function Projects() {
   const [index, setIndex] = useState(0)

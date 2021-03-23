@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react"
-import Nav from "./Nav"
-import HelloText from "./HelloText"
-import TypeText from "./TypeText"
-import * as styles from "../style/landing.module.css"
-import Social from './Social'
+import Nav from "../Nav"
+import HelloText from "../HelloText"
+import TypeText from "../TypeText"
+import * as styles from "../../style/landing.module.css"
+import Social from '../Social'
 
 function Landing() {
   // 1: left 2:center 3:right
@@ -94,13 +94,13 @@ function Landing() {
                 most passionate about making a positive impact and innovating
                 within the field of software engineering.
               </p>
-              <h4>Languages:</h4>
+              <h3>Languages:</h3>
               <ul className={styles.skillsContainer}>
                 {languages.map((skill, index) => {
                   return <li key={index}>{skill}</li>
                 })}
               </ul>
-              <h4>Technologies:</h4>
+              <h3>Technologies:</h3>
               <ul className={styles.skillsContainer}>
                 {technologies.map((skill, index) => {
                   return <li key={index}>{skill}</li>

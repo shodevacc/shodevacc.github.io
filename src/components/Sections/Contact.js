@@ -1,18 +1,19 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Section from "./Section"
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import Section from "../Section";
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as styles from "../style/contact.module.css"
+import * as styles from "../../style/contact.module.css";
 
 function Contact() {
-  const data = useStaticQuery(graphql`{
-  Logo: file(relativePath: {eq: "Logo.jpg"}) {
-    childImageSharp {
-      gatsbyImageData(layout: FULL_WIDTH)
+  const data = useStaticQuery(graphql`
+    {
+      Logo: file(relativePath: { eq: "Logo.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(layout: FULL_WIDTH)
+        }
+      }
     }
-  }
-}
-`)
+  `);
 
   // console.log(data.Logo.childImageSharp.fluid)
   return (
@@ -21,7 +22,10 @@ function Contact() {
       contentContainerStyle={{ backgroundColor: "#393e41" }}
     >
       <div className={styles.container}>
-        <GatsbyImage image={data.Logo.childImageSharp.gatsbyImageData} className={styles.logo} />
+        <GatsbyImage
+          image={data.Logo.childImageSharp.gatsbyImageData}
+          className={styles.logo}
+        />
 
         <div className={styles.cards}>
           <a
@@ -54,4 +58,4 @@ function Contact() {
   );
 }
 
-export default Contact
+export default Contact;

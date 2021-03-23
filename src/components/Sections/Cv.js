@@ -1,6 +1,6 @@
 import React from "react"
-import Section from "./Section"
-import * as styles from "../style/cv.module.css"
+import Section from "../Section"
+import * as styles from "../../style/cv.module.css"
 
 function cv() {
   return (

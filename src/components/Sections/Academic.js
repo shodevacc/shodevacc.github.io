@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
-import * as styles from "../style/academic.module.css"
-import Section from "./Section"
+import * as styles from "../../style/academic.module.css"
+import Section from "../Section"
 
 function Academic() {
   return (

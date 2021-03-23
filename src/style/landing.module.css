@@ -21,7 +21,7 @@
 .contentLeftContainer,
 .contentRightContainer {
   height: 100vh;
-  min-height: 60rem;
+  min-height: 66rem;
   width: 300vw;
   display: flex;
   transition: 1s ease;
@@ -149,6 +149,7 @@
   transform: translate(-5%, 0);
   width: 80%;
   text-align: justify;
+  margin: 0 0 2rem 0;
 }
 /* .hideData {
   font-size: 3vw;

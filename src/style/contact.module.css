@@ -12,6 +12,7 @@
     background-color: var(--cinnabar);
     overflow: hidden;
   }
+ 
   .cards,
   .contactCard {
     display: flex;
@@ -29,6 +30,18 @@
   }
   .contactCard:last-child {
     border-top: 1px solid var(--onyx);
+  }
+  .contactCard p{
+    transition: transform .3s  cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .contactCard img{
+    transition: transform .3s  cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  .contactCard:hover img{
+    transform: scale(1.2);
+  }
+  .contactCard:hover p{
+    transform: translate(0,6px);
   }
   .contactCard1 img {
     transition: transform 0.3s ease;

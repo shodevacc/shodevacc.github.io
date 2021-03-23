@@ -1,13 +1,12 @@
 import React from "react";
-import Landing from "../components/Landing";
-import About from "../components/About";
-import Academic from "../components/Academic";
-import Cv from "../components/Cv";
-import Contact from "../components/Contact";
-import Projects from "../components/Projects";
+import Landing from "../components/Sections/Landing";
+import About from "../components/Sections/About";
+import Academic from "../components/Sections/Academic";
+import Cv from "../components/Sections/Cv";
+import Contact from "../components/Sections/Contact";
+import Projects from "../components/Sections/Projects";
 import Float from "../components/Float";
-import Three from "../components/Three";
-import Typography from '../components/Sections/Typography'
+import Frontend from '../components/Sections/Frontend'
 import { Link } from "gatsby";
 
 import MainLayout from "../components/MainLayout";
@@ -25,9 +24,7 @@ const IndexPage = () => (
     <Float />
     <Projects />
     <Float />
-    <Typography/>
-    <Float/>
-    <Three />
+    <Frontend/>
     <Float />
     <Cv />
     <Float />

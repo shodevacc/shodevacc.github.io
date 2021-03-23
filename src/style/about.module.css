@@ -5,6 +5,9 @@
     align-items: center;
     position: relative;
   }
+  .col{
+    color:var(--cinnabar);
+  }
   .link {
     padding: 5px;
     color: var(--onyx);

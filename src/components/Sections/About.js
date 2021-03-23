@@ -1,8 +1,8 @@
 import React, { useEffect } from "react"
-import Section from "./Section"
-import { view, scrollAnimate } from "./animation"
-import * as styles from '../style/about.module.css'
-import Stars from './Stars'
+import Section from "../Section"
+import { view, scrollAnimate } from "../animation"
+import * as styles from '../../style/about.module.css'
+import Stars from '../Stars'
 
 function About() {
   useEffect(() => {
