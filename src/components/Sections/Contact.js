@@ -54,6 +54,18 @@ function Contact() {
           </a>
         </div>
       </div>
+      <p style={{ color: "#f6f7eb" }}>
+        Design Inspiration:
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#e94f37" }}
+          href="https://tobiasahlin.com/"
+        >
+          {" "}
+          Tobias Ahlin Bjerrome
+        </a>
+      </p>
     </Section>
   );
 }
