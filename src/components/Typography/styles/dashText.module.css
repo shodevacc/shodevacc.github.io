@@ -1,0 +1,52 @@
+:root {
+  --dash-color1: #4d163d;
+  --dash-color2: #840037;
+  --dash-color3: #bd0034;
+  --dash-color4: #b61071;
+  --dash-color5: #fdb731;
+}
+.dashSVG {
+  display: block;
+  font: 10em "monospace";
+  background: black;
+  margin: 0 auto;
+}
+.textCopy {
+  fill: none;
+  stroke: black;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.textCopy:nth-child(1) {
+  stroke: var(--dash-color1);
+  animation-delay: -1;
+}
+
+.textCopy:nth-child(2) {
+  stroke: var(--dash-color2);
+  animation-delay: -2s;
+}
+
+.textCopy:nth-child(3) {
+  stroke: var(--dash-color3);
+  animation-delay: -3s;
+}
+
+.textCopy:nth-child(4) {
+  stroke: var(--dash-color4);
+  animation-delay: -4s;
+}
+
+.textCopy:nth-child(5) {
+  stroke: var(--dash-color5);
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}

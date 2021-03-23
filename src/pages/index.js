@@ -7,9 +7,9 @@ import Contact from "../components/Contact";
 import Projects from "../components/Projects";
 import Float from "../components/Float";
 import Three from "../components/Three";
+import Typography from '../components/Sections/Typography'
 import { Link } from "gatsby";
 
-import Layout from "../components/layout";
 import MainLayout from "../components/MainLayout";
 import Image from "../components/image";
 import SEO from "../components/seo";
@@ -25,6 +25,8 @@ const IndexPage = () => (
     <Float />
     <Projects />
     <Float />
+    <Typography/>
+    <Float/>
     <Three />
     <Float />
     <Cv />

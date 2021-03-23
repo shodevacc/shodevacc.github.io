@@ -1,0 +1,87 @@
+:root {
+  --color1: rgba(255, 0, 0, 0.75);
+  --color2: rgba(0, 255, 0, 0.75);
+  --color3: rgba(0, 0, 255, 0.75);
+}
+
+.glitchText {
+  position: relative;
+  font-size: 4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: whitesmoke;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  text-shadow: 0.05em 0 0 var(--color1), -0.05em -0.025em 0 var(--color2),
+    -0.025em 0.05em 0 var(--color3);
+  animation: glitch 1000ms linear infinite;
+  /* margin: 0; */
+}
+
+.glitchText span:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: glitch 650ms infinite, slide 1000ms infinite alternate;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 0 70%);
+  transform: translate(-0.025em, -0.0125em);
+  opacity: 0.8;
+}
+.glitchText span:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: glitch 375ms infinite, slide1 1000ms infinite alternate;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(0.025em, 0.0125em);
+  opacity: 0.8;
+}
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 var(--color1), -0.05em -0.025em 0 var(--color2),
+      -0.025em 0.05em 0 var(--color3);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 var(--color1), -0.05em -0.025em 0 var(--color2),
+      -0.025em 0.05em 0 var(--color3);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 var(--color1),
+      0.025em 0.025em 0 var(--color2), -0.05em -0.05em 0 var(--color3);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 var(--color1),
+      0.025em 0.025em 0 var(--color2), -0.05em -0.05em 0 var(--color3);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 var(--color1), 0.05em 0 0 var(--color2),
+      0 -0.05em 0 var(--color3);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 var(--color1), 0.05em 0 0 var(--color2),
+      0 -0.05em 0 var(--color3);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 var(--color1), -0.025em -0.025em 0 var(--color2),
+      -0.025em -0.05em 0 var(--color3);
+  }
+}
+/* 
+   @keyframes slide{
+      0%{
+          clip-path: polygon(0 0, 100% 100%, 100% 0, 0 0);
+      }
+      100%{
+          clip-path: polygon(0 100%, 100% 0, 100% 0, 0 0);
+      }
+  }
+  
+  @keyframes slide1{
+      0%{
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 0);
+      }
+      100%{
+          clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 100%);
+      }
+  } */

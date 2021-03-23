@@ -1,0 +1,50 @@
+:root {
+  --trailHeight: 50vh;
+  --trailFontSize: 4em;
+  --MiddleText: 7; /* n+1; n=Number of text trail elements */
+  --trailColor: white;
+  --TransitionTextDuration:3s;
+  --trailOffset:1s;
+
+}
+
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  width: 100%;
+  height: var(--trailHeight);
+  justify-content: center;
+  align-items: center;
+}
+.outerTextBox {
+  flex: 1;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+.outerTextBox:nth-child(6) {
+  flex: none;
+}
+.innerText {
+  font-size: var(--trailFontSize);
+  font-weight: 900;
+  color: var(--trailColor);
+}
+.outlineText {
+  -webkit-text-stroke: 0.1em var(--trailColor);
+  text-stroke: 0.1em var(--trailColor);
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+}
+
+
+@keyframes showText{
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
