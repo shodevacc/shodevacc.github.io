@@ -1,0 +1,2 @@
+(self.webpackChunkshoaib_alyaan_portfolio=self.webpackChunkshoaib_alyaan_portfolio||[]).push([[186],{8295:function(a,e,l){"use strict";l.r(e);var n=l(7294);e.default=function(){return n.createElement("div",null,"fold")}}}]);
+//# sourceMappingURL=component---src-pages-animations-fold-js-4da20761e3b2042d0487.js.map
