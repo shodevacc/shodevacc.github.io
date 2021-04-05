@@ -1,17 +1,14 @@
 import React from "react"
-import first from "../images/cycle/first.jpg"
-import second from "../images/cycle/second.gif"
-import third from "../images/cycle/third.gif"
+import first from "../../images/cycle/first.jpg"
+import second from "../../images/cycle/second.gif"
+import third from "../../images/cycle/third.gif"
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as styles from "../style/cycle.module.css"
-import SEO from "../components/seo"
-import Gohome from "../components/Gohome"
+import * as styles from "../../style/cycle.module.css"
+import Page from "../../components/Page"
 
 function Cycle() {
   return (
-    <div>
-      <SEO title="Self-Balancing Cycle with Location Tracking" />
-      <Gohome />
+    <Page title="Self-Balancing Cycle with Location Tracking">
       <div className={styles.container}>
         <h2>Self-Balancing Cycle with Location Tracking</h2>
         <img className={styles.img} src={first} />
@@ -72,7 +69,7 @@ function Cycle() {
           </a>
         </p>
       </div>
-    </div>
+    </Page>
   )
 }
 

@@ -1,8 +1,7 @@
 import React from "react"
-import SEO from "../components/seo"
-import Gohome from "../components/Gohome"
+import Page from "../../components/Page"
 import { graphql } from "gatsby"
-import * as styles from "../style/agri.module.css"
+import * as styles from "../../style/agri.module.css"
 import { GatsbyImage } from "gatsby-plugin-image";
 
 function agri({ data }) {
@@ -13,9 +12,7 @@ function agri({ data }) {
   })
 
   return (
-    <React.Fragment>
-      <SEO title="Agri-Cane project" />
-      <Gohome />
+    <Page title="Agri-Cane project">
       <div className={styles.container}>
         <h2>AGRI-CANE</h2>
         <h4 style={{ margin: "0px 0px 50px", textAlign: "center" }}>
@@ -371,7 +368,7 @@ function agri({ data }) {
           </div>
         </div>
       </div>
-    </React.Fragment>
+    </Page>
   );
 }
 

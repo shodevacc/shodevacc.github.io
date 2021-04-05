@@ -1,9 +1,8 @@
 import React from "react"
-import Gohome from "../components/Gohome"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as styles from "../style/SOS.module.css"
-import SEO from "../components/seo"
+import * as styles from "../../style/SOS.module.css"
+import Page from "../../components/Page"
 
 function SOS({ data }) {
   var filteredData = {}
@@ -11,11 +10,9 @@ function SOS({ data }) {
   data.SOS.edges.forEach(edge => {
     filteredData[edge.node.name] = edge.node.childImageSharp.gatsbyImageData
   })
-  console.log(filteredData)
+  // console.log(filteredData)
   return (
-    <React.Fragment>
-      <SEO title="Shoaib Alyaan GPS location tracker with SOS Broadcasting" />
-      <Gohome />
+    <Page title="Shoaib Alyaan GPS location tracker with SOS Broadcasting">
       <div className={styles.container}>
         <h2>GPS location tracker with SOS Broadcasting</h2>
         <GatsbyImage image={filteredData.Design} className={styles.img} />
@@ -59,7 +56,7 @@ function SOS({ data }) {
           </a>
         </p>
       </div>
-    </React.Fragment>
+    </Page>
   );
 }
 

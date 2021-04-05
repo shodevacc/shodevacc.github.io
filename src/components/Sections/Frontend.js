@@ -11,6 +11,21 @@ function Frontend() {
       contentContainerStyle={{ backgroundColor: "#393e41" }}
     >
       <div className={styles.container}>
+        <Link className={styles.link} to="/animations">
+          <div style={{background:'#576065'}} className={`${styles.card} ${styles.typographyCard}`}>
+            <div className={styles.view}>
+              <p style={{ margin: 0 }}>View</p>
+            </div>
+            <Glitch classNameContainer={styles.typography}>Animations</Glitch>
+            <div className={styles.info}>
+              <div className={styles.divider}></div>
+              <p>
+                Some animations I recreated using HTML,CSS and
+                Javascript.
+              </p>
+            </div>
+          </div>
+        </Link>
         <div className={styles.row}>
           <Link className={styles.link} to="/typography">
             <div className={`${styles.card} ${styles.typographyCard}`}>

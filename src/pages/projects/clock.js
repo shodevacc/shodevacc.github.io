@@ -1,15 +1,12 @@
-import React from "react"
-import SEO from "../components/seo"
-import mp4 from "../images/clock/clock.mp4"
-import webm from "../images/clock/clock.webm"
-import Gohome from "../components/Gohome"
-import * as styles from "../style/SOS.module.css"
+import React from "react";
+import mp4 from "../../images/clock/clock.mp4";
+import webm from "../../images/clock/clock.webm";
+import Page from "../../components/Page";
+import * as styles from "../../style/SOS.module.css";
 
 function clock() {
   return (
-    <React.Fragment>
-      <SEO title="Persistence of Vision Rotating Clock project" />
-      <Gohome />
+    <Page title="Persistence of Vision Rotating Clock project">
       <div style={{ marginBottom: "8vw" }} className={styles.container}>
         <h2>Persistence of Vision Rotating Clock</h2>
         <div>
@@ -50,8 +47,8 @@ function clock() {
           </p>
         </div>
       </div>
-    </React.Fragment>
-  )
+    </Page>
+  );
 }
 
-export default clock
+export default clock;
