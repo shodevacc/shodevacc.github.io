@@ -1,7 +1,7 @@
 import React from "react"
 import Page from "../../components/Page"
 import { graphql } from "gatsby"
-import * as styles from "../../style/agri.module.css"
+import * as styles from "../../style/projects/agri.module.css"
 import { GatsbyImage } from "gatsby-plugin-image";
 
 function agri({ data }) {
@@ -33,48 +33,61 @@ function agri({ data }) {
           </div>
           <div>
             <div>
-              <h3>Introduction</h3>
+              <h3 className="cinnabarH3">Introduction</h3>
               <p>
                 In today’s era, farmers face a lot of problems while growing
                 their crops. This could be due to lack of insight on the growth
-                requirements of the crop or due to environmental factors. In our
-                project we highlight on the growth of sugarcane from sowing till
-                cutting and monitor every aspect throughout.
+                requirements of the crop or due to environmental factors.<br />
+                We propose an autonomous system to montior the growth of plants from sowing till
+                cutting and monitor every aspect throughout.<br /> Additionally, we also propose to monitor the NPK (Nitrogen, Phosphorous, Potassium) and pH values of soil so farmers can better treat their crops.<br /> A block diagram outlining the system has been shown.
               </p>
-              <h3>Scope</h3>
-              <p>
-                I assisted{" "}
-                <a
-                  href="https://www.linkedin.com/in/yash-prakash-030292162"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "blue" }}
-                >
-                  Yash Prakash
-                </a>{" "}
-                in specifically implementing the Image Classification model of
-                this project. Deep-Learning applied to computer vision was
-                implemented to monitor leaves of sugarcane and indicate whether
-                it is infected with yellow leaf syndrome or red dot disease,
-                which are the two prominent diseases which attack sugarcane, and
-                can be detected using image processing techniques. This would
-                help the farmers increase their yield.
-              </p>
-              <h3>My Objectives</h3>
-              <ul style={{ listStyleType: "disc" }}>
+
+              <h3 className="cinnabarH3">POC Goals</h3>
+              <ul>
                 <li>
-                  To help the farmer by giving productive information about the
-                  health of his/her farm.
+                  Create a system for the detection of disease in plants and spray suitable insecticide/ medicine to counteract.
                 </li>
                 <li>
-                  Employ state of the art deep learning to achieve maximum
-                  accuracy.
+                  Implement notification system to notify farmer if human intervention needed for survival of crop.
                 </li>
               </ul>
+
             </div>
           </div>
         </div>
-        <h3>The Software</h3>
+
+        <h3 className="cinnabarH3">Progress</h3>
+        <ul>
+          <li>
+            Implemented a Deep Convolution Neural Network to classify between diseased plants and healthy ones across several classes of crops.
+            <ul>
+              <li>
+                Deep-Learning applied to computer vision was
+                implemented to monitor leaves of plants and indicate whether
+                it is infected with disease or not.
+                Diseases which can be detected using image processing techniques have been incorporated.
+              </li>
+            </ul>
+          </li>
+          <li>
+            Deployed the Model on a Flask Webserver to run inference on a WebApp.
+          </li>
+          <li>
+            Set up electronics to run inference as an IoT Device at periodic intervals.
+          </li>
+        </ul>
+
+        <h3 className="cinnabarH3">Next Work</h3>
+        <ul>
+          <li>
+            Run the model on the Embedded System for Edge Inference.
+          </li>
+          <li>
+            Interface peripheral devices to Notify and Spray Medicine on crops.
+          </li>
+        </ul>
+
+        <h3 className="cinnabarH3">The Software</h3>
         <p>
           There are three main steps involved in the Image Processing portion of
           this project.
@@ -90,11 +103,12 @@ function agri({ data }) {
           </li>
           <li>
             Apply some magic from Transfer Learning to make it "transfer" its
-            learnt skills of feature extraction on our sugarcanes, and detect
+            learnt skills of feature extraction on our plants, and detect
             the presence of any disease.
           </li>
         </ul>
-        <h4>INCEPTION V3</h4>
+
+        <h4 className="cinnabarH3">INCEPTION V3</h4>
         <p>
           Inception v3 is a widely-used image recognition model that has been
           shown to attain greater than 78.1% accuracy on the ImageNet dataset.
@@ -214,7 +228,7 @@ function agri({ data }) {
           the model and only images from the evaluation dataset are used to
           evaluate model accuracy.
         </p>
-        <h3>Transfer Learning</h3>
+        <h3 className="cinnabarH3">Transfer Learning</h3>
         <div>
           <GatsbyImage image={filteredData.transfer} />
           <p className={styles.figName}>Fig: Transfer Learning</p>
@@ -257,7 +271,7 @@ function agri({ data }) {
           efficiently learn to extract features from photographs in order to
           perform well on the problem.
         </p>
-        <h3>Proposed Model</h3>
+        <h3 className="cinnabarH3">Proposed Model</h3>
         <div>
           <GatsbyImage
             image={filteredData.proposed}
@@ -318,11 +332,11 @@ function agri({ data }) {
             style={{ maxWidth: "500px", margin: "auto" }} />
           <p className={styles.figName}>Fig: Snippet of Dataset</p>
         </div>
-        <h3>RESULTS</h3>
+        <h3 className="cinnabarH3">RESULTS</h3>
         <p>
           Here is the final webapp landing page where the farmer is expected to
           upload the image of the suagarcane leaf to check if it is diseased or
-          not.(Developed by Yash)
+          not.
           <br />
           The uploaded image is sent to the back end where the image processing
           techniques are used to determine the state of the crop.

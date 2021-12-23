@@ -44,17 +44,7 @@ function SOS({ data }) {
           attached to the shell of the device in order to alert the guardian if
           the device has been broken.
         </p>
-        <p>
-          This project was co-created by
-          <a
-            style={{ color: "blue" }}
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://reubenojacob.github.io/index.html"
-          >
-            Reuben Jacob
-          </a>
-        </p>
+        
       </div>
     </Page>
   );

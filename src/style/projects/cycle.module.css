@@ -1,0 +1,31 @@
+.container {
+  width: 100vw;
+  padding: 15px;
+}
+.container p {
+  margin: 20px 0;
+  text-align: justify;
+  line-height: 1.4;
+}
+.container h2 {
+  margin: 50px 0;
+  text-align: center;
+  font-size: 32px;
+  text-shadow: 1px 1px 2px #000;
+  color: var(--cinnabar);
+}
+.container h3 {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 20px;
+  color: var(--cinnabar);
+}
+.img {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 100vw;
+    padding: 50px;
+  }
+}

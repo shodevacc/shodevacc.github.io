@@ -51,14 +51,30 @@ function projects({ data }) {
             link="Cycle"
           />
           <Card
+            title="Smart Helmet"
+            img={filteredData.Helmet}
+            info=" Alternate mode of transportation for differently abled
+                individuals which provides assistive riding features by using a
+                motorized flywheel to balance the vehicle and location tracking."
+            link="helmet"
+          />
+          <Card
             title="AGRI-CANE"
             img={filteredData.sugarcane}
             info=" An application for farmers to monitor real time data about the
             NPK(Nitrogen, Phosphorous, Potassium) and pH values of soil.
             Image Processing is utilised to also detect whether the plant is
-            infected with yellow leaf syndrome or red dot disease, which are
-            two prominent diseases which attack sugarcane."
+            infected with visable disease."
             link="agri"
+          />
+          <Card
+            title="Amazon Shopping Assistant"
+            img={filteredData.shopping}
+            info=" An application for farmers to monitor real time data about the
+            NPK(Nitrogen, Phosphorous, Potassium) and pH values of soil.
+            Image Processing is utilised to also detect whether the plant is
+            infected with visable disease."
+            link="shop"
           />
           <Card
             title=" GPS Location Tracker with SOS Broadcasting."

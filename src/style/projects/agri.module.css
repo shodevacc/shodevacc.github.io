@@ -7,6 +7,9 @@
   list-style-type: lower-alpha;
   margin-left: 10px;
 }
+.container li{
+  margin: 5px 0;
+}
 .container ul ul {
   font-size: 14px;
   list-style-type: disc;
@@ -42,6 +45,10 @@
   }
   .float div:first-of-type {
     flex-basis: 40%;
+    margin-right: 20px;
+  }
+  .float video {
+    width: 40%;
     margin-right: 20px;
   }
   .float div:last-child {
