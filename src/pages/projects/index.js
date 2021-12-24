@@ -45,17 +45,17 @@ function projects({ data }) {
           <Card
             title="Self Balancing Cycle with Location Tracking"
             img={filteredData.cycle}
-            info=" Alternate mode of transportation for differently abled
+            info="Alternate mode of transportation for differently abled
                 individuals which provides assistive riding features by using a
-                motorized flywheel to balance the vehicle and location tracking."
+                motorized flywheel to balance the vehicle with location tracking."
             link="Cycle"
           />
           <Card
             title="Smart Helmet"
             img={filteredData.Helmet}
-            info=" Alternate mode of transportation for differently abled
-                individuals which provides assistive riding features by using a
-                motorized flywheel to balance the vehicle and location tracking."
+            info="A smart helmet with Accident Detection features to notify authroities
+              in case of an accident, to decrease time for initial response. Machine-Learning is also
+              applied to study the physiological state of the wearer of the helmet."
             link="helmet"
           />
           <Card
@@ -70,10 +70,9 @@ function projects({ data }) {
           <Card
             title="Amazon Shopping Assistant"
             img={filteredData.shopping}
-            info=" An application for farmers to monitor real time data about the
-            NPK(Nitrogen, Phosphorous, Potassium) and pH values of soil.
-            Image Processing is utilised to also detect whether the plant is
-            infected with visable disease."
+            info="A Chrome Extension to modify the DOM stucture of the 
+            amazon website, to optimise its usage by the visually impaired. 
+            Powered by Deep Learning."
             link="shop"
           />
           <Card
