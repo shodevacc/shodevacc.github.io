@@ -1,12 +1,12 @@
 import React from "react";
 import mp4 from "../../images/clock/clock.mp4";
 import webm from "../../images/clock/clock.webm";
-import Page from "../../components/Page";
-import * as styles from "../../style/SOS.module.css";
+import Page from '../../components/Layout/Page'
+import * as styles from "../../style/projects/SOS.module.css";
 
 function clock() {
   return (
-    <Page title="Persistence of Vision Rotating Clock project">
+    <Page darkNav addPadd title="Persistence of Vision Rotating Clock project">
       <div style={{ marginBottom: "8vw" }} className={styles.container}>
         <h2>Persistence of Vision Rotating Clock</h2>
         <div>

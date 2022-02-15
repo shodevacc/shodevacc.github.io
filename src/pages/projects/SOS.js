@@ -1,8 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image";
-import * as styles from "../../style/SOS.module.css"
-import Page from "../../components/Page"
+import * as styles from "../../style/projects/SOS.module.css"
+import Page from '../../components/Layout/Page'
 
 function SOS({ data }) {
   var filteredData = {}
@@ -12,7 +12,7 @@ function SOS({ data }) {
   })
   // console.log(filteredData)
   return (
-    <Page title="Shoaib Alyaan GPS location tracker with SOS Broadcasting">
+    <Page darkNav addPadd title="Shoaib Alyaan GPS location tracker with SOS Broadcasting">
       <div className={styles.container}>
         <h2>GPS location tracker with SOS Broadcasting</h2>
         <GatsbyImage image={filteredData.Design} className={styles.img} />

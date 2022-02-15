@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Page from "../../components/Page";
+import Page from '../../components/Layout/Page'
 import * as styles from "../../style/animations/imagelayer.module.css";
 import { graphql } from "gatsby";
 import img1 from "../../images/animations/imagelayer/image1.jpg";
@@ -34,7 +34,7 @@ function Imagelayer({ data }) {
   //   console.log("DONE")
   // }
   return (
-    <Page title={"imagelayer"}>
+    <Page darkNav title="imagelayer">
       <div className={styles.container}>
         <a.div
           style={{

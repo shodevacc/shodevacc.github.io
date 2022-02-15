@@ -4,11 +4,11 @@ import second from "../../images/cycle/second.gif"
 import third from "../../images/cycle/third.gif"
 import { GatsbyImage } from "gatsby-plugin-image";
 import * as styles from "../../style/projects/cycle.module.css"
-import Page from "../../components/Page"
+import Page from '../../components/Layout/Page'
 
 function Cycle() {
   return (
-    <Page title="Self-Balancing Cycle with Location Tracking">
+    <Page darkNav addPadd title="Self-Balancing Cycle with Location Tracking">
       <div className={styles.container}>
         <h2>Self-Balancing Cycle with Location Tracking</h2>
         <h3>Some Links</h3>

@@ -1,5 +1,5 @@
 import React from "react"
-import Page from "../../components/Page"
+import Page from '../../components/Layout/Page'
 import { graphql } from "gatsby"
 import * as styles from "../../style/projects/agri.module.css"
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -12,7 +12,7 @@ function agri({ data }) {
   })
 
   return (
-    <Page title="Amazon Shopping Assistant project">
+    <Page darkNav addPadd title="Amazon Shopping Assistant project">
       <div className={styles.container}>
         <h2>Amazon Shopping Assistant</h2>
         <p>

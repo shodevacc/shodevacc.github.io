@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
-import { chain } from "./animation"
-import * as styles from "../style/nav.module.css"
+import { chain } from "../animation"
+import * as styles from "../../style/nav.module.css"
 
 function Nav() {
   const [open, setOpen] = useState(false)

@@ -9,7 +9,7 @@ function cv() {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://drive.google.com/file/d/1FEopjd_Zh70N4bZbaVgfnQiJflEmlOa0/view?usp=sharing"
+          href="/Resume.pdf"
         >
           <h2>View Resume</h2>
         </a>

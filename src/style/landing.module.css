@@ -143,13 +143,16 @@
   font-size: 13px;
   font-weight: 800;
   transition: 0.2s ease;
-  color: #fff;
+  color: #000;
   opacity: 1;
   line-height: 1.2;
   transform: translate(-5%, 0);
   width: 80%;
   text-align: justify;
   margin: 0 0 2rem 0;
+}
+.data b{
+  color: #fff;
 }
 /* .hideData {
   font-size: 3vw;
@@ -183,11 +186,14 @@
   margin: 5px;
 }
 @media only screen and (min-width: 568px) {
+  .contentText {
+    margin: 1rem 0 0 0;
+  }
   .NavContainer {
     width: calc(100vw - var(--outer-margin) * 3);
   }
   .mainContainer {
-    margin: var(--outer-margin) var(--outer-margin) 0 var(--outer-margin);
+    margin: 1rem var(--outer-margin) 0 var(--outer-margin);
     overflow: hidden;
     background-color: #f08080;
   }

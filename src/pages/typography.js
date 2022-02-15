@@ -1,15 +1,12 @@
 import React from "react";
 import TextList from "../components/Typography";
-import Gohome from "../components/Gohome";
-import SEO from "../components/seo";
+import Page from '../components/Layout/Page'
 
 function typography() {
   return (
-    <React.Fragment>
-      <SEO title="Typography" />
-      <Gohome />
+    <Page darkNav title="Typography Shoaib alyaan">
       <TextList />
-    </React.Fragment>
+    </Page>
   );
 }
 

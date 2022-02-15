@@ -1,7 +1,8 @@
 import React from "react";
-import Page from "../../components/Page";
+// import Page from "../../components/Page";
 import { graphql } from "gatsby";
 import * as styles from "../../style/internships.module.css";
+import Page from '../../components/Layout/Page'
 import { GatsbyImage } from "gatsby-plugin-image";
 
 const Card = ({ title, info, link, img }) => {
@@ -29,7 +30,7 @@ function internships({ data }) {
   });
 
   return (
-    <Page title="Shoaib Alyaan Internships">
+    <Page darkNav title="Shoaib Alyaan Internships">
       <div className={styles.MainContainer}>
         <div className={styles.header}>
           <h2 className={`${styles.headText}`}>Internships</h2>

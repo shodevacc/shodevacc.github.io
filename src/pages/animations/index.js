@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "../../style/internships.module.css";
 import { graphql, Link } from "gatsby";
-import Page from "../../components/Page";
+import Page from '../../components/Layout/Page'
 
 const Card = ({ title, info, link }) => {
   return(
@@ -20,7 +20,7 @@ const Card = ({ title, info, link }) => {
 
 function animations() {
   return (
-    <Page title="Shoaib Alyaan Animation">
+    <Page darkNav title="Shoaib Alyaan Animation">
       <div className={styles.MainContainer}>
         <div className={styles.header}>
           <h2 className={`${styles.headText}`}>Animations</h2>

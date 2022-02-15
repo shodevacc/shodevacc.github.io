@@ -3,11 +3,12 @@ import { Canvas } from "react-three-fiber";
 import * as styles from "../style/THREE.module.css";
 import * as THREE from "three";
 import { useTransition, a } from "react-spring";
-import Gohome from "../components/Gohome";
 
 import Ship from "../THREE/components/SpaceShip";
 import Controls from "../THREE/components/OrbitControls";
 import Box from "../THREE/components/Box";
+
+import Page from '../components/Layout/Page'
 
 function Loading() {
   const [finished, set] = useState(false);
@@ -39,8 +40,7 @@ function Loading() {
 
 function space() {
   return (
-    <React.Fragment>
-      <Gohome />
+    <Page title="ThreeJs Shoaib Alyaan">
       <div className={styles.space}>
         <h1 className={styles.spaceText}>To Infinity and Beyond!</h1>
         <Canvas
@@ -70,7 +70,7 @@ function space() {
         </Canvas>
         <Loading />
       </div>
-    </React.Fragment>
+    </Page>
   );
 }
 

@@ -25,6 +25,7 @@ function Contact() {
         <GatsbyImage
           image={data.Logo.childImageSharp.gatsbyImageData}
           className={styles.logo}
+          alt="Shoaib Alyaan"
         />
 
         <div className={styles.cards}>

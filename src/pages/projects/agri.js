@@ -1,5 +1,5 @@
 import React from "react"
-import Page from "../../components/Page"
+import Page from '../../components/Layout/Page'
 import { graphql } from "gatsby"
 import * as styles from "../../style/projects/agri.module.css"
 import { GatsbyImage } from "gatsby-plugin-image";
@@ -12,7 +12,7 @@ function agri({ data }) {
   })
 
   return (
-    <Page title="Agri-Cane project">
+    <Page darkNav addPadd title="Agri-Cane project">
       <div className={styles.container}>
         <h2>AGRI-CANE</h2>
         <h4 style={{ margin: "0px 0px 50px", textAlign: "center" }}>

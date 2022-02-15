@@ -11,8 +11,9 @@ function Frontend() {
       contentContainerStyle={{ backgroundColor: "#393e41" }}
     >
       <div className={styles.container}>
+        <h3 style={{ color: '#fff', textAlign:'center' }}>Some fun I had playing around with animations on the web.</h3>
         <Link className={styles.link} to="/animations">
-          <div style={{background:'#576065'}} className={`${styles.card} ${styles.typographyCard}`}>
+          <div style={{ background: '#576065' }} className={`${styles.card} ${styles.typographyCard}`}>
             <div className={styles.view}>
               <p style={{ margin: 0 }}>View</p>
             </div>

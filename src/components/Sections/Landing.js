@@ -32,8 +32,13 @@ function Landing() {
     "Keras",
     "Numpy",
     "Scikit-Learn",
+    "Web3Js",
+    "Flask",
+    "Tensorflow",
+    "Strapi"
   ]
   const languages = [
+    "Verilog",
     "Javascript",
     "Python",
     "C",
@@ -42,39 +47,22 @@ function Landing() {
     "HTML",
     "Assembly Level Programming(ARM)",
     "CSS",
+    "R",
+    "Solidity"
   ]
   return (
     <React.Fragment>
-      <div className={styles.NavContainer}>
-        <Nav />
-        {/* Right Icon */}
-        <div
-          onClick={() => {
-            if (pos == 3) {
-              setPos(2)
-            } else {
-              setPos(3)
-              !trigger.right && setTrigger(state => ({ ...state, right: true }))
-            }
-          }}
-          className={pos == 3 ? styles.reverseRightIcon : styles.rightIcon}
-        >
-          <div className={`${styles.rightBar} ${styles.rightBar1}`}></div>
-          <div className={`${styles.rightBar} ${styles.rightBar2}`}></div>
-          <div className={`${styles.rightBar} ${styles.rightBar3}`}></div>
-        </div>
-        {/* Right Icon */}
-      </div>
+    
       {/* Main Container */}
       <div className={styles.mainContainer}>
-        <Social/>
+        <Social />
         <div
           style={
             pos == 1
               ? { transform: "translate3d(0,0,0)" }
               : pos == 2
-              ? { transform: "translate3d(-100vw,0,0)" }
-              : { transform: "translate3d(-200vw,0,0)" }
+                ? { transform: "translate3d(-100vw,0,0)" }
+                : { transform: "translate3d(-200vw,0,0)" }
           }
           className={styles.contentContainer}
         >
@@ -86,13 +74,13 @@ function Landing() {
                 }}
                 trigger={trigger.left}
               >
-                I am Shoaib.
+                I'm Shoaib.
               </TypeText>
               <p className={styles.data}>
-                Undergraduate in Electronics and Instrumentation Engineering
-                from Ramaiah Institute of Technology, Bangalore, 2020 batch. I'm
-                most passionate about making a positive impact and innovating
-                within the field of software engineering.
+
+                I'm interested in <b>accelerating the training and inference of machine learning / neuromorphic algorithms </b>
+                by exploring methodologies such as designing <b>high throughput energy-efficient
+                  hardware</b> and novel <b>software optimizations</b>.
               </p>
               <h3>Languages:</h3>
               <ul className={styles.skillsContainer}>
@@ -100,7 +88,7 @@ function Landing() {
                   return <li key={index}>{skill}</li>
                 })}
               </ul>
-              <h3>Technologies:</h3>
+              <h3>Software:</h3>
               <ul className={styles.skillsContainer}>
                 {technologies.map((skill, index) => {
                   return <li key={index}>{skill}</li>

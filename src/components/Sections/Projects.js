@@ -30,7 +30,7 @@ function Projects() {
     {
       title: "10DerMeatz",
       description: "An E-Commerce website that took a local meat store online.",
-      img: <GatsbyImage image={filteredData.tender} style={{ borderRadius: "50%" }} />,
+      img: <GatsbyImage image={filteredData.tender} style={{ borderRadius: "50%" }}   alt="10Dermeatz Logo" />,
       git: "https://github.com/shodevacc/10dermeatzDocker",
     },
     {
@@ -44,9 +44,16 @@ function Projects() {
       title: "MissionMilk",
       description:
         "A project to showcase and raise awareness about a Non-Profit, with the mission of feeding the underpriviledged during the COVID-19 lockdown.",
-      img: <GatsbyImage image={filteredData.MILK_LOGO} />,
+      img: <GatsbyImage image={filteredData.MILK_LOGO}   alt="Mission Milk" />,
       git: "https://github.com/shodevacc/missionmilk",
       link: "https://missionmilk.in/",
+    },
+    {
+      title: "N.K. Caterers",
+      description:
+        "Developed complete E-Commerce website for business.",
+      img: <GatsbyImage image={filteredData.NK}   alt="N.K. caterers" />,
+      link: "https://www.nkcaterers.com/",
     },
     {
       title: "Anees",
