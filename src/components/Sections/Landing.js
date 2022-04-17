@@ -77,10 +77,10 @@ function Landing() {
                 I'm Shoaib.
               </TypeText>
               <p className={styles.data}>
-
-                I'm interested in <b>accelerating the training and inference of machine learning / neuromorphic algorithms </b>
-                by exploring methodologies such as designing <b>high throughput energy-efficient
-                  hardware</b> and novel <b>software optimizations</b>.
+                Undergraduate in <b>Electronics and Instrumentation Engineering </b>
+                from <b>Ramaiah Institute of Technology</b>, Bangalore, 2020 batch. I'm
+                most passionate about innovating and building
+                within the field of <b>software engineering.</b>
               </p>
               <h3>Languages:</h3>
               <ul className={styles.skillsContainer}>
