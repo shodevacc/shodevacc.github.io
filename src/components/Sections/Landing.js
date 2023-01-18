@@ -27,6 +27,7 @@ function Landing() {
   const technologies = [
     "React",
     "Gatsbyjs",
+    "NextJs",
     "Nginx",
     "Docker",
     "Keras",
@@ -34,12 +35,14 @@ function Landing() {
     "Scikit-Learn",
     "Web3Js",
     "Flask",
+    "Django",
     "Tensorflow",
     "Strapi"
   ]
   const languages = [
     "Verilog",
     "Javascript",
+    "Typescript",
     "Python",
     "C",
     "C++",
@@ -52,7 +55,7 @@ function Landing() {
   ]
   return (
     <React.Fragment>
-    
+
       {/* Main Container */}
       <div className={styles.mainContainer}>
         <Social />
@@ -77,10 +80,8 @@ function Landing() {
                 I'm Shoaib.
               </TypeText>
               <p className={styles.data}>
-                Undergraduate in <b>Electronics and Instrumentation Engineering </b>
-                from <b>Ramaiah Institute of Technology</b>, Bangalore, 2020 batch. I'm
-                most passionate about innovating and building
-                within the field of <b>software engineering.</b>
+                I'm currently enrolled in the MSc in Computer Science program at <b>Old Dominion University.</b> I love software and am
+                passionate about innovating and building solutions utilizing the power of computers to improve the daily life of humans.
               </p>
               <h3>Languages:</h3>
               <ul className={styles.skillsContainer}>
