@@ -39,10 +39,10 @@ export const scrollAnimate = props => {
       var cArray
       // Get the parent element
       var parent = document.querySelector(`.${props.cname}`)
+      // The section may already be gone (e.g. a scroll fired while navigating away)
+      if (!parent) return
       // Get an array of all children of parent
-      cArray = Array.prototype.slice.call(
-        document.querySelector(`.${props.cname}`).childNodes
-      )
+      cArray = Array.prototype.slice.call(parent.childNodes)
       // If a style is given to apply to the children
       if (props.style) {
         if (view(parent)) {

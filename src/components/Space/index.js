@@ -8,14 +8,18 @@ import * as styles from "../../style/space.module.css";
 import Ship from "./SpaceShip";
 import Controls from "./OrbitControls";
 
-function Loading() {
-  const [finished, set] = useState(false);
+// Overlay with a progress bar, hidden once the ship has rendered.
+// (Relying on the loader's onLoad alone left it stuck when the model was
+// already cached, since nothing loads and onLoad never fires.)
+function Loading({ finished }) {
   const [width, setWidth] = useState(0);
 
   useEffect(() => {
-    THREE.DefaultLoadingManager.onLoad = () => set(true);
     THREE.DefaultLoadingManager.onProgress = (url, itemsLoaded, itemsTotal) =>
       setWidth((itemsLoaded / itemsTotal) * 200);
+    return () => {
+      THREE.DefaultLoadingManager.onProgress = undefined;
+    };
   }, []);
 
   const transitions = useTransition(finished, {
@@ -36,12 +40,13 @@ function Loading() {
 }
 
 function Space() {
+  const [loaded, setLoaded] = useState(false);
   return (
     <div className={styles.space}>
       <h1 className={styles.spaceText}>To Infinity and Beyond!</h1>
       <Canvas camera={{ position: [0, 0, 15] }} shadows="percentage">
         <Suspense fallback={null}>
-          <Ship />
+          <Ship onLoaded={() => setLoaded(true)} />
         </Suspense>
 
         <Controls />
@@ -62,7 +67,7 @@ function Space() {
         />
         <fog attach="fog" args={["#cc7b32", 16, 20]} />
       </Canvas>
-      <Loading />
+      <Loading finished={loaded} />
     </div>
   );
 }
