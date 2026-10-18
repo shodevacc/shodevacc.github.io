@@ -1,0 +1,36 @@
+intro: >-
+  I'm currently enrolled in the MSc in Computer Science program at Old Dominion
+  University. I love software and am passionate about innovating and building
+  solutions utilizing the power of computers to improve the daily life of
+  humans.
+languages:
+  - Verilog
+  - Javascript
+  - Typescript
+  - Python
+  - C
+  - C++
+  - Java
+  - HTML
+  - Assembly Level Programming(ARM)
+  - CSS
+  - R
+  - Solidity
+software:
+  - React
+  - Gatsbyjs
+  - NextJs
+  - Nginx
+  - Docker
+  - Keras
+  - Numpy
+  - Scikit-Learn
+  - Web3Js
+  - Flask
+  - Django
+  - Tensorflow
+  - Strapi
+email: shodevacc@gmail.com
+linkedin: https://www.linkedin.com/in/shoaib-alyaan-355861184/
+github: https://github.com/shodevacc
+resume: /resume.pdf

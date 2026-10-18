@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect } from "react"
 import { scrollAnimate } from "./animation"
 import * as styles from "../style/section.module.css"

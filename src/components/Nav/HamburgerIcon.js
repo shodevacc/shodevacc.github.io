@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef } from "react"
 import styled from "styled-components"
 
@@ -17,26 +19,26 @@ const Icon = styled.div`
 const Bar = styled.div`
   height: 0.2em;
   width: 100%;
-  background: ${({ theme, dark }) => dark ? theme.colors.cinnabar : '#fff'};
+  background: ${({ theme, $dark }) => $dark ? theme.colors.cinnabar : '#fff'};
   border-radius:15px;
   position: absolute;
   transition: 0.3s ease;
-  :first-child {
+  &:first-child {
     top: 0px;
     left: 0;
-    transform: ${({ open }) =>
-    open ? `translate(0, 0.5em) rotate(45deg)` : "none"};
+    transform: ${({ $open }) =>
+    $open ? `translate(0, 0.5em) rotate(45deg)` : "none"};
   }
-  :nth-child(2) {
+  &:nth-child(2) {
     top: 50%;
     left: 0;
-    opacity: ${({ open }) => (open ? `0` : "1")};
+    opacity: ${({ $open }) => ($open ? `0` : "1")};
   }
-  :last-child {
+  &:last-child {
     top: 100%;
     left: 0;
-    transform: ${({ open }) =>
-    open ? `translate(0, -0.5em) rotate(-45deg)` : "none"};
+    transform: ${({ $open }) =>
+    $open ? `translate(0, -0.5em) rotate(-45deg)` : "none"};
   }
 `
 const HamburgerIcon = ({ open, setOpen, dark = false }) => {
@@ -45,9 +47,9 @@ const HamburgerIcon = ({ open, setOpen, dark = false }) => {
 
   return (
     <Icon onClick={() => setOpen(state => !state)}>
-      <Bar dark={dark} open={open} ref={BarRef} />
-      <Bar dark={dark} open={open} ref={BarRef1} />
-      <Bar dark={dark} open={open} />
+      <Bar $dark={dark} $open={open} ref={BarRef} />
+      <Bar $dark={dark} $open={open} ref={BarRef1} />
+      <Bar $dark={dark} $open={open} />
     </Icon>
   )
 }

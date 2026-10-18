@@ -1,4 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
     <img alt="Sho-Icon" src="/src/images/SHO.svg" width="60" />
 </p>
@@ -7,34 +6,32 @@
 </h1>
 Hello! This is the website I made to showcase my modern web-development skills along with information about myself. I have included my Academic projects, work experience, freelance projects, resume and contact information.
 
-## 🚀 Here's a look at how I made this website and why I choose these technologies.
+## Stack
 
-1.  **GATSBY**
+- **Next.js** (App Router) with React 19
+- **Keystatic** for editing content through an admin page
+- CSS Modules and styled-components, all hand-written
 
-    I used the React framework, **Gatsby**, to build this website as it is known for creating extremely fast loading static sites. I enjoyed working with this framework and would encourage anyone reading this to give **Gatsby** a try as it has a lot of features which makes the mundane tasks related to Web-Development less annoying. (Like image optimisation using **gatsby-image**).
+## Running it
 
-    The added benefit of having starter templates, which gives your project a well defined structure: attractive to beginners.
+```shell
+npm install
+npm run dev
+```
 
-    ooh it also has **SEO** built in 🎉🎉
+The site runs at http://localhost:3000 and the admin at http://localhost:3000/keystatic.
 
-    This is the default starter I used.
+## Editing content
 
-    ```shell
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter https://github.com/gatsbyjs/gatsby-starter-default
-    ```
+Projects, academic projects, internships, publications and site info (intro, skills, links, resume) live in `content/` as YAML files, with their images in `public/images/`. Edit them either:
 
-2.  **NO Bootstrap/Reused Code**
+- in the admin at `/keystatic`, which writes the files for you, or
+- directly in your editor.
 
-    All the HTML, CSS and javascript used in this project has been **written by me**. I **did not use** any pre-existing CSS framework or ready-made components as I wanted this to be a showcase of my strong fundamental knowledge.
+To add a new field (say, a tech stack for projects), add it to `keystatic.config.js` and the admin form picks it up.
 
-3.  **gh-pages**
+In development the admin saves to your local files. On the deployed site it commits to GitHub instead: set `NEXT_PUBLIC_KEYSTATIC_STORAGE=github` and follow Keystatic's GitHub setup (`/keystatic` walks you through creating the GitHub app).
 
-    I used the gh-pages package to automate my production build and deployment process. The command can be seen in the Package.json file named "deploy".
+## Still to port
 
-    ```shell
-    # Build and Deploy the production build to my gh-pages branch
-    gatsby build && gh-pages -b gh-pages -d public
-    ```
-
-## Cheers 🍻 🍻
+The old Gatsby pages in `legacy-gatsby/` (project detail pages, animations, typography and the three.js space page) haven't been moved over yet.

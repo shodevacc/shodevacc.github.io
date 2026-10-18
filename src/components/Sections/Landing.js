@@ -1,11 +1,12 @@
+"use client";
+
 import React, { useState, useEffect } from "react"
-import Nav from "../Nav"
 import HelloText from "../HelloText"
 import TypeText from "../TypeText"
 import * as styles from "../../style/landing.module.css"
 import Social from '../Social'
 
-function Landing() {
+function Landing({ site }) {
   // 1: left 2:center 3:right
   const [pos, setPos] = useState(2)
   const [trigger, setTrigger] = useState({ left: false, right: false }) //Trigger for the typing animation
@@ -24,41 +25,12 @@ function Landing() {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
-  const technologies = [
-    "React",
-    "Gatsbyjs",
-    "NextJs",
-    "Nginx",
-    "Docker",
-    "Keras",
-    "Numpy",
-    "Scikit-Learn",
-    "Web3Js",
-    "Flask",
-    "Django",
-    "Tensorflow",
-    "Strapi"
-  ]
-  const languages = [
-    "Verilog",
-    "Javascript",
-    "Typescript",
-    "Python",
-    "C",
-    "C++",
-    "Java",
-    "HTML",
-    "Assembly Level Programming(ARM)",
-    "CSS",
-    "R",
-    "Solidity"
-  ]
   return (
     <React.Fragment>
 
       {/* Main Container */}
       <div className={styles.mainContainer}>
-        <Social />
+        <Social github={site.github} linkedin={site.linkedin} />
         <div
           style={
             pos == 1
@@ -77,21 +49,18 @@ function Landing() {
                 }}
                 trigger={trigger.left}
               >
-                I'm Shoaib.
+                I&apos;m Shoaib.
               </TypeText>
-              <p className={styles.data}>
-                I'm currently enrolled in the MSc in Computer Science program at <b>Old Dominion University.</b> I love software and am
-                passionate about innovating and building solutions utilizing the power of computers to improve the daily life of humans.
-              </p>
+              <p className={styles.data}>{site.intro}</p>
               <h3>Languages:</h3>
               <ul className={styles.skillsContainer}>
-                {languages.map((skill, index) => {
+                {site.languages.map((skill, index) => {
                   return <li key={index}>{skill}</li>
                 })}
               </ul>
               <h3>Software:</h3>
               <ul className={styles.skillsContainer}>
-                {technologies.map((skill, index) => {
+                {site.software.map((skill, index) => {
                   return <li key={index}>{skill}</li>
                 })}
               </ul>

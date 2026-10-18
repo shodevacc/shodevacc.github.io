@@ -1,5 +1,7 @@
+"use client";
+
 import React, { useState, useRef, useEffect } from 'react'
-import { Link } from 'gatsby'
+import Link from "next/link";
 import styled from 'styled-components'
 import HamburgerIcon from './HamburgerIcon'
 
@@ -13,7 +15,7 @@ const Container = styled.div`
     left:0;
     z-index:1000;
     display: flex;
-    transform: ${({ open }) => open ? `translate3d(0,0,0)` : `translate3d(-101%,0,0)`};
+    transform: ${({ $open }) => $open ? `translate3d(0,0,0)` : `translate3d(-101%,0,0)`};
     transition: transform .3s ease;
     /* pointer-events:${({ open }) => open ? "auto" : "none"}; */
 `
@@ -31,7 +33,7 @@ const NavBar = styled.div`
 
     z-index:1001;
 
-    background: ${({ theme, showNavBarBg }) => showNavBarBg ? 'rgba(0,0,0,0.8)' : 'rgba(0,0,0,0)'};
+    background: ${({ $showNavBarBg }) => $showNavBarBg ? 'rgba(0,0,0,0.8)' : 'rgba(0,0,0,0)'};
     /* backdrop-filter: blur(10px); */
 `
 const NavItems = styled.div`
@@ -104,31 +106,31 @@ function Nav1({ dark = false }) {
     }, [showNavBarBg])
     return (
         <>
-            <Container ref={ContainerRef} open={open} onClick={CheckClick}>
-                <NavItems open={open} >
+            <Container ref={ContainerRef} $open={open} onClick={CheckClick}>
+                <NavItems>
                     <NavLink>
                         <p>
-                            <Link to="/">Home</Link>
+                            <Link href="/">Home</Link>
                         </p>
 
                     </NavLink>
                     <NavLink>
                         <p
-                        ><Link to="/internships">Internships</Link></p>
+                        ><Link href="/internships">Internships</Link></p>
 
                     </NavLink>
                     <NavLink>
-                        <p> <Link to="/projects">Academic projects</Link></p>
+                        <p> <Link href="/projects">Academic projects</Link></p>
 
                     </NavLink>
                     <NavLink>
-                        <p><Link to="/Publications">Publications</Link></p>
+                        <p><Link href="/publications">Publications</Link></p>
 
                     </NavLink>
                 </NavItems>
-                <CloseArea ref={CloseAreaRef} open={open} onClick={() => setOpen(false)} />
+                <CloseArea ref={CloseAreaRef} onClick={() => setOpen(false)} />
             </Container>
-            <NavBar showNavBarBg={showNavBarBg}>
+            <NavBar $showNavBarBg={showNavBarBg}>
                 <HamburgerIcon dark={dark} open={open} setOpen={setOpen} />
             </NavBar>
 

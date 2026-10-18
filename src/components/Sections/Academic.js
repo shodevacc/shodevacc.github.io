@@ -1,5 +1,7 @@
+"use client";
+
 import React from "react"
-import { Link } from "gatsby"
+import Link from "next/link";
 import * as styles from "../../style/academic.module.css"
 import Section from "../Section"
 import styled from 'styled-components'
@@ -64,13 +66,13 @@ function Academic() {
       contentContainerStyle={{ backgroundColor: "#393e41" }}
     >
       <Container>
-        <Link to="/internships">
+        <Link href="/internships">
           <h2>Internships</h2>
         </Link>
-        <Link to="/projects">
+        <Link href="/projects">
           <h2>Projects</h2>
         </Link>
-        <Link to="/Publications">
+        <Link href="/publications">
           <h2>Publications</h2>
         </Link>
       </Container>

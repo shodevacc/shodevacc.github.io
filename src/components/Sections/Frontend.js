@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "../Section";
-import { Link } from "gatsby";
+import Link from "next/link";
 import * as styles from "../../style/frontend.module.css";
 import Glitch from "../Typography/js/Glitch";
 
@@ -12,7 +12,7 @@ function Frontend() {
     >
       <div className={styles.container}>
         <h3 style={{ color: '#fff', textAlign:'center' }}>Some fun I had playing around with animations on the web.</h3>
-        <Link className={styles.link} to="/animations">
+        <Link className={styles.link} href="/animations">
           <div style={{ background: '#576065' }} className={`${styles.card} ${styles.typographyCard}`}>
             <div className={styles.view}>
               <p style={{ margin: 0 }}>View</p>
@@ -28,7 +28,7 @@ function Frontend() {
           </div>
         </Link>
         <div className={styles.row}>
-          <Link className={styles.link} to="/typography">
+          <Link className={styles.link} href="/typography">
             <div className={`${styles.card} ${styles.typographyCard}`}>
               <div className={styles.view}>
                 <p style={{ margin: 0 }}>View</p>
@@ -43,7 +43,7 @@ function Frontend() {
               </div>
             </div>
           </Link>
-          <Link className={styles.link} to="/space">
+          <Link className={styles.link} href="/space">
             <div className={styles.card}>
               <div className={styles.view}>
                 <p style={{ margin: 0 }}>View</p>
@@ -53,7 +53,7 @@ function Frontend() {
                 <div className={styles.divider}></div>
                 <p>
                   I really like making 3D animations on the web, and this is
-                  what I've made with it
+                  what I&apos;ve made with it
                 </p>
               </div>
             </div>

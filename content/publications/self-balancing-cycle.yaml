@@ -1,0 +1,13 @@
+title: Self-Balancing Cycle with Location tracking
+link: https://link.springer.com/chapter/10.1007/978-981-16-2543-5_26
+abstract: >-
+  This paper proposes a design for a reaction wheel assisted self-balancing
+  bicycle modelled as an inverted pendulum. The control system uses an inertial
+  measurement unit to measure the angular displacement of the cycle and then
+  employs a micro-controller, a high torque motor and a reaction wheel, to
+  correct its position by calculating the corrective torque required.
+  Additionally, the bicycle also offers a location tracking capability using a
+  Global System for Mobile (GSM) and a Global Positioning System (GPS). The
+  device can also be used as a rehabilitation and transportation device for
+  disabled and senile individuals.
+order: 1

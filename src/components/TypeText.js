@@ -1,22 +1,19 @@
+"use client";
+
 import React, { useState, useEffect } from "react"
 import * as styles from "../style/typetext.module.css"
 
-function TypeText({ children,trigger,style }) {
-  var chars = children.split("")
+function TypeText({ children, trigger, style }) {
   const [text, setText] = useState("")
   useEffect(() => {
-    trigger&&chars.forEach((element, index) => {
-      setTimeout(() => {
-        setText(state => {
-          return state + element
-        })
-      }, 100 + index * 100)
-    })
-    return () => {}
-  }, [trigger])
+    if (!trigger) return
+    const timers = children.split("").map((_, index) =>
+      setTimeout(() => setText(children.slice(0, index + 1)), 100 + index * 100)
+    )
+    return () => timers.forEach(clearTimeout)
+  }, [trigger, children])
 
-
-  return <h1 style={{...style}} className={styles.animate}>{text}</h1>
+  return <h1 style={{ ...style }} className={styles.animate}>{text}</h1>
 }
 
 export default TypeText

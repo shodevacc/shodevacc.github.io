@@ -1,70 +1,15 @@
+"use client";
+
 import React, { useEffect, useState } from "react"
 import Section from "../Section"
-import SHO from "../../images/SHO.svg"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image";
+import Image from "next/image"
 import * as styles from "../../style/projects.module.css"
 
-function Projects() {
+function Projects({ projects }) {
   const [index, setIndex] = useState(0)
   const [hover, setHover] = useState(false)
-  const data = useStaticQuery(graphql`{
-  ProjectImg: allFile(filter: {relativeDirectory: {eq: "Projects"}}) {
-    edges {
-      node {
-        name
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-    }
-  }
-}
-`)
-  var filteredData = {}
-
-  data.ProjectImg.edges.forEach(edge => {
-    filteredData[edge.node.name] = edge.node.childImageSharp.gatsbyImageData
-  })
-  const proData = [
-    {
-      title: "10DerMeatz",
-      description: "An E-Commerce website that took a local meat store online.",
-      img: <GatsbyImage image={filteredData.tender} style={{ borderRadius: "50%" }}   alt="10Dermeatz Logo" />,
-      git: "https://github.com/shodevacc/10dermeatzDocker",
-    },
-    {
-      title: "My Website",
-      description:
-        "My website to showcase my modern web-development skills along with information about my Academic projects, work experience, freelance projects, resume and contact information.",
-      img: <img src={SHO} />,
-      git: "https://github.com/shodevacc/shodevacc.github.io",
-    },
-    {
-      title: "MissionMilk",
-      description:
-        "A project to showcase and raise awareness about a Non-Profit, with the mission of feeding the underpriviledged during the COVID-19 lockdown.",
-      img: <GatsbyImage image={filteredData.MILK_LOGO}   alt="Mission Milk" />,
-      git: "https://github.com/shodevacc/missionmilk",
-      link: "https://missionmilk.in/",
-    },
-    {
-      title: "N.K. Caterers",
-      description:
-        "Developed complete E-Commerce website for business.",
-      img: <GatsbyImage image={filteredData.NK}   alt="N.K. caterers" />,
-      link: "https://www.nkcaterers.com/",
-    },
-    {
-      title: "Anees",
-      description: "A Consultancy/Blog site (Design Completed)",
-      img: <GatsbyImage image={filteredData.Anees} style={{ borderRadius: "50%" }} />,
-      git: "https://github.com/shoaibalyaan/shoaibalyaan.github.io",
-      link: "https://shoaibalyaan.github.io/",
-    },
-  ]
   //   Add the first element again to create a loop
-  proData.push(proData[0])
+  const proData = [...projects, projects[0]]
 
   useEffect(() => {
     //parent Scroll element
@@ -155,7 +100,20 @@ function Projects() {
             {proData.map((project,index) => {
               return (
                 <div key={index} className={styles.card}>
-                  <div className={styles.Img}>{project.img}</div>
+                  <div className={styles.Img}>
+                    <Image
+                      {...project.image}
+                      alt={project.title}
+                      sizes="200px"
+                      style={{
+                        width: "200px",
+                        height: "auto",
+                        maxHeight: "200px",
+                        objectFit: "contain",
+                        borderRadius: project.roundImage ? "50%" : undefined,
+                      }}
+                    />
+                  </div>
                   <p>{project.description}</p>
                 </div>
               )

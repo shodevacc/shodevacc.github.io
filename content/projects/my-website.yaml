@@ -1,0 +1,9 @@
+title: My Website
+description: >-
+  My website to showcase my modern web-development skills along with
+  information about my Academic projects, work experience, freelance projects,
+  resume and contact information.
+image: /images/projects/my-website/image.svg
+roundImage: false
+github: https://github.com/shodevacc/shodevacc.github.io
+order: 2

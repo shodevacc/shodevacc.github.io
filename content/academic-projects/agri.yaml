@@ -1,0 +1,7 @@
+title: AGRI-CANE
+summary: >-
+  An application for farmers to monitor real time data about the NPK(Nitrogen,
+  Phosphorous, Potassium) and pH values of soil. Image Processing is utilised to
+  also detect whether the plant is infected with visible disease.
+image: /images/academic-projects/agri/image.jpg
+order: 3
