@@ -1,0 +1,41 @@
+---
+title: Self Balancing Cycle with Location Tracking
+summary: >-
+  Alternate mode of transportation for differently abled individuals which
+  provides assistive riding features by using a motorized flywheel to balance
+  the vehicle with location tracking.
+image: /images/academic-projects/cycle/image.jpg
+order: 1
+---
+
+### Some Links
+
+{% linkButtons %}
+- [Paper Publication](https://link.springer.com/chapter/10.1007/978-981-16-2543-5_26)
+- [View Insight maker Simulation](https://insightmaker.com/insight/198271/Self-Balancing-Cycle)
+- [Best project Award](/images/academic-projects/cycle/best-project-award.pdf)
+{% /linkButtons %}
+
+{% figure image="/images/academic-projects/cycle/bicycle.jpg" /%}
+
+### Introduction
+
+Bicycles are a common form of transportation, recreation, and a medium of exercise which have been used for years. Bicycles serve to provide physical therapy, as they are a low impact form of exercise that can train balance, strength, stamina and coordination. Though riding a bicycle is considered to be an artless task for many, it is an arduous endeavor for the differently abled.
+
+A system that could provide balancing assistance to the rider without otherwise affecting the experience could provide great benefit to these groups of individuals. Such a system could be used both as a teaching tool, and as a physically therapeutic device.
+
+### Methodology
+
+This project brings the best efficient way in order to achieve this by using a reaction wheel that opposes the angular momentum of the fall by rotating at high speeds. An IMU sensor along with Kalman filtering is used to measure the tilt angle of the cycle as it falls, and the required direction and RPM of the wheel is calculated with a micro controller
+
+Running a Simulation of the system gets us the expected response of the system as shown below
+
+{% figure image="/images/academic-projects/cycle/simulation.gif" /%}
+
+### Below is a fun representation of the system at work made using python
+
+{% figure image="/images/academic-projects/cycle/animation.gif" narrow=true /%}
+
+### Why Location Tracking?
+
+Along with this, the bicycle also offers a location tracking capability wherein the location of the cycle can be tracked by the guardian. The device uses a GPS (Global Positioning System) module, which detects the latitude and longitude of a location. The micro-controller processes this information and sends it to the GSM (Global System for Mobile) module. The GSM system then sends the information to the guardian’s mobile phone. This location is then continuously transmitted to a server and can be accessed by a guardian through a website.

@@ -11,14 +11,18 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md,css}\""
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.3.0",
     "@keystatic/core": "^0.6.9",
     "@keystatic/next": "^5.0.5",
+    "@markdoc/markdoc": "^0.4.0",
     "@react-spring/web": "^10.1.2",
+    "@react-three/fiber": "^9.8.2",
     "image-size": "^2.0.4",
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0",
-    "styled-components": "^6.6.0"
+    "styled-components": "^6.6.0",
+    "three": "^0.186.1"
   },
   "devDependencies": {
     "eslint": "^9",

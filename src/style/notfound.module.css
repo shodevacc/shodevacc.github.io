@@ -1,0 +1,38 @@
+/* Self-contained: the 404 page sits outside the site layout,
+   so it doesn't load global.css */
+.page {
+  min-height: 100vh;
+  background: #f6f7eb;
+  overflow: hidden;
+}
+.container {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.code {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 18vw;
+  line-height: 1;
+  margin: 0;
+  color: #e94f37;
+  text-shadow: 5px 5px #000;
+}
+.home {
+  margin-top: 10px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: #e94f37;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: var(--font-poppins), sans-serif;
+}
+.home:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}

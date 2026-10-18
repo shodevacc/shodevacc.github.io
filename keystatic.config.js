@@ -1,4 +1,5 @@
 import { config, collection, singleton, fields } from "@keystatic/core";
+import { block, repeating, wrapper } from "@keystatic/core/content-components";
 
 // Local storage in development (edits write straight to files in this repo).
 // In production the admin commits to GitHub instead. See README for setup.
@@ -13,6 +14,49 @@ const image = (dir, label = "Image") =>
     directory: `public/images/${dir}`,
     publicPath: `/images/${dir}/`,
   });
+
+// Building blocks available in the project write-up editor.
+// Each one is rendered by a matching component in src/components/ProjectBody.
+const projectAssets = {
+  directory: "public/images/academic-projects",
+  publicPath: "/images/academic-projects/",
+};
+export const projectBodyComponents = {
+  figure: block({
+    label: "Figure",
+    description: "An image with an optional caption",
+    schema: {
+      image: fields.image({ label: "Image", ...projectAssets }),
+      caption: fields.text({ label: "Caption" }),
+      narrow: fields.checkbox({ label: "Narrow (max 500px wide)" }),
+    },
+  }),
+  video: block({
+    label: "Video",
+    description: "An autoplaying, looping, muted video",
+    schema: {
+      webm: fields.file({ label: "WebM file", ...projectAssets }),
+      mp4: fields.file({ label: "MP4 file (fallback)", ...projectAssets }),
+    },
+  }),
+  columns: repeating({
+    label: "Side by side",
+    description: "Two or more columns next to each other on wide screens",
+    children: ["column"],
+    validation: { children: { min: 2 } },
+    schema: {},
+  }),
+  column: wrapper({
+    label: "Column",
+    forSpecificLocations: true,
+    schema: {},
+  }),
+  linkButtons: wrapper({
+    label: "Link buttons",
+    description: "Put a bulleted list of links inside to show them as buttons",
+    schema: {},
+  }),
+};
 
 const order = fields.integer({
   label: "Order",
@@ -78,12 +122,22 @@ export default config({
       label: "Academic projects",
       slugField: "title",
       path: "content/academic-projects/*",
+      format: { contentField: "body" },
       columns: ["title", "order"],
       schema: {
         title: fields.slug({ name: { label: "Title" } }),
-        summary: fields.text({ label: "Summary", multiline: true }),
-        image: image("academic-projects"),
+        summary: fields.text({
+          label: "Summary",
+          description: "Shown on the Academic Projects page",
+          multiline: true,
+        }),
+        image: image("academic-projects", "Card image"),
         order,
+        body: fields.markdoc({
+          label: "Write-up",
+          options: { image: projectAssets },
+          components: projectBodyComponents,
+        }),
       },
     }),
     internships: collection({

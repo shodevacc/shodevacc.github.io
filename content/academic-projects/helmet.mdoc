@@ -1,0 +1,50 @@
+---
+title: Smart Helmet
+summary: >-
+  A smart helmet with Accident Detection features to notify authorities in case
+  of an accident, to decrease time for initial response. Machine-Learning is
+  also applied to study the physiological state of the wearer of the helmet.
+image: /images/academic-projects/helmet/image.jpeg
+order: 2
+---
+
+### Why Smart Helmet?
+
+Road-traffic accidents are a major cause of premature death and disability all over the world. Increasingly so in a country like India where motorcycles are an important mode of transportation. Injury prevention efforts are, thus, vital to decrease the impact of such injuries
+
+### Proposed Solution
+
+With Smart Helmet we propose a system for automated help initiation in case of an accident and a method to monitor the physiological state of the rider.
+
+- The Pulse sensor is used to check if the helmet is worn
+- A combination of values from impact sensor and HRV data (From Pulse sensor) is analysed using Machine-Learning to predict whether an accident has occured or not.
+- In case of an accident, IoT communication Protocols are to be implemented to contact Hospitals and immediate reduce services to reduce time to first response.
+
+#### Accident Detection:
+
+- A Peizo-Electric element is proposed to be used as an impact sensor.
+- A Pulse sensor is used to monitor HRV (Heart Rate Variability). This is used to monitor changes in the sympathetic nervous system, namely flight/flight response.
+
+A combination of Impact sensor and HRV data is used to predict if whether an accident has occured.
+
+#### Prediction and Analysis
+
+- HRV (Heart Rate Variability) data is used to monitor the physiological state of the rider
+  - HRV data is used to infer details about the autonomic nervous system (ANS) as they relate to elevated activity and stressful states. ( For Accident Detection )
+  - Data can also be analysed to send reports about the health of the rider that can be infered through changes in ANS, such as stress levels while riding, excessive relaxation which could lead to "Lack Of Concentration".
+- Prediction of Sensor Data in case of faulty impact sensor
+  - If impact sensors get damaged, we propose utilising HRV data to infer data about stress and fight or flight responses, and predict values for failing sensor.
+
+#### Progress
+
+{% columns %}
+{% column %}
+{% figure image="/images/academic-projects/helmet/impact.jpg" caption="Fig: Probability of Impact on areas" /%}
+{% /column %}
+
+{% column %}
+- RHRV package is used with R programming language to study the HRV data and infer about the ANS.
+- Creation of Impact Sensor: Work is being done to create an impact sensor utilising Peizo-Eletric Material.
+  - A "Mesh" structure is trying to be explored by which impact can be detected in the primary regions of impact on the helmet.
+{% /column %}
+{% /columns %}

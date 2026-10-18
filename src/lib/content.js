@@ -7,7 +7,7 @@ import keystaticConfig from "../../keystatic.config";
 const reader = createReader(process.cwd(), keystaticConfig);
 
 // next/image needs real dimensions for images that live in /public
-function withSize(src) {
+export function withSize(src) {
   if (!src) return null;
   const { width, height } = imageSize(
     readFileSync(path.join(process.cwd(), "public", src))
@@ -31,3 +31,10 @@ export const getProjects = () => list("projects");
 export const getAcademicProjects = () => list("academicProjects");
 export const getInternships = () => list("internships");
 export const getPublications = () => list("publications");
+
+export const getAcademicProject = async (slug) => {
+  const entry = await reader.collections.academicProjects.read(slug, {
+    resolveLinkedFiles: true,
+  });
+  return entry && { slug, ...entry };
+};

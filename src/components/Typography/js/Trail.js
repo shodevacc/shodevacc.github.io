@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useRef, useState } from "react";
 import * as styles from "../styles/trailText.module.css";
 
@@ -21,7 +23,6 @@ async function getTrailOrder(ref) {
 
 //TO show the text. Input is the array of pairs and interval between their animations
 function showText(elements, interval = 200) {
-  console.log("SHOWINF");
   //Iterate over all the elements(an array of pairs of elements(array)) and make their opacity 1 at regular intervals
   elements.forEach((pair, index) => {
     setTimeout(() => {
@@ -42,7 +43,6 @@ function showText(elements, interval = 200) {
 }
 
 function hideText(elements, interval = 200) {
-  console.log("Hiding");
   const length = elements.length;
 
   //Iterate over all the elements(an array of pairs of elements(array)) and make their opacity 1 at regular intervals

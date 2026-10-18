@@ -6,18 +6,18 @@ import * as styles from "../../style/internships.module.css";
 function InfoCard({ title, info, image, link }) {
   return (
     <div className={styles.cardContainer}>
-      <div className={styles.cardImg}>
-        <div className={styles.Img}>
-          {image && (
+      {image && (
+        <div className={styles.cardImg}>
+          <div className={styles.Img}>
             <Image
               {...image}
               alt={title}
               sizes="(min-width: 768px) 50vw, 100vw"
               style={{ width: "100%", height: "auto" }}
             />
-          )}
+          </div>
         </div>
-      </div>
+      )}
 
       <div className={styles.cardInfo}>
         <h2 style={{ color: "#e94f37", textAlign: "center" }}>{title}</h2>

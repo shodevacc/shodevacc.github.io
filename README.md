@@ -32,6 +32,9 @@ To add a new field (say, a tech stack for projects), add it to `keystatic.config
 
 In development the admin saves to your local files. On the deployed site it commits to GitHub instead: set `NEXT_PUBLIC_KEYSTATIC_STORAGE=github` and follow Keystatic's GitHub setup (`/keystatic` walks you through creating the GitHub app).
 
-## Still to port
+Academic projects also have a **Write-up** (the page behind "Learn More"). Besides normal text it has a few building blocks in the editor's **+** menu: Figure (image with caption), Video, Side by side (columns), and Link buttons.
 
-The old Gatsby pages in `legacy-gatsby/` (project detail pages, animations, typography and the three.js space page) haven't been moved over yet.
+## Other bits
+
+- `/space` is the three.js scene (React Three Fiber), in `src/components/Space`.
+- Set `NEXT_PUBLIC_SITE_URL` to the final domain so the sitemap and link previews use it. On Vercel the production URL is used until then.

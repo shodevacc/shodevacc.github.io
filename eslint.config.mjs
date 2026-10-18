@@ -10,8 +10,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Old Gatsby pages waiting to be ported
-    "legacy-gatsby/**",
   ]),
 ]);
 

@@ -1,0 +1,103 @@
+.body {
+  font-family: var(--font-poppins), sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+}
+.body p {
+  margin: 20px 0;
+  text-align: justify;
+  line-height: 1.4;
+}
+.body h3,
+.body h4 {
+  margin: 20px 0;
+  text-align: center;
+  color: var(--cinnabar);
+}
+.body h3 {
+  font-size: 20px;
+}
+.body ul {
+  font-size: 16px;
+  list-style-type: lower-alpha;
+  margin-left: 10px;
+}
+.body li {
+  margin: 5px 0;
+}
+.body ul ul {
+  font-size: 14px;
+  list-style-type: disc;
+  font-weight: 500;
+}
+.body a {
+  color: blue;
+  text-decoration: underline;
+}
+.linkButtons ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 0;
+  list-style: none;
+}
+.linkButtons li {
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid var(--cinnabar);
+  cursor: pointer;
+  margin: 10px;
+}
+.linkButtons li:hover {
+  background: var(--cinnabar);
+}
+.linkButtons a {
+  color: #000;
+  text-decoration: none;
+}
+.linkButtons li:hover a {
+  color: #fff;
+}
+.figure {
+  margin: 20px 0;
+}
+.figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.narrow {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.figure figcaption {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 8px;
+}
+.video {
+  display: block;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+.columns {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+  .columns {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  .columns > div:first-child {
+    flex-basis: 40%;
+  }
+  .columns > div:last-child {
+    flex-basis: 50%;
+  }
+}
