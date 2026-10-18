@@ -103,7 +103,7 @@ function Trail({ children }) {
     // })
   };
   return (
-    <div className="TextContainer">
+    <div className={styles.wrapper}>
       <div ref={containerRef} className={styles.container}>
         {number.map((i, index) => {
           return (
@@ -120,7 +120,9 @@ function Trail({ children }) {
           );
         })}
       </div>
-      <button onClick={handleClick}>Toggle</button>
+      <button className={styles.toggle} onClick={handleClick}>
+        {showState.state ? "Show" : "Hide"}
+      </button>
     </div>
   );
 }
