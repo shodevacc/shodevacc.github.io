@@ -45,11 +45,14 @@ function Space() {
         </Suspense>
 
         <Controls />
-        <ambientLight intensity={0.3} />
-        <pointLight intensity={0.7} position={[-10, -25, -10]} />
+        {/* three.js now uses physically based lights; these values (× π, no
+            distance falloff) match how the scene looked with the old ones */}
+        <ambientLight intensity={0.3 * Math.PI} />
+        <pointLight intensity={0.7 * Math.PI} decay={0} position={[-10, -25, -10]} />
         <spotLight
           castShadow
-          intensity={2.25}
+          intensity={2.25 * Math.PI}
+          decay={0}
           angle={0.2}
           penumbra={1}
           position={[25, 25, 25]}

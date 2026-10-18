@@ -33,6 +33,7 @@
   margin: 0;
 }
 .link {
+  display: inline-block;
   margin: 30px 0;
   padding: 10px;
   border: 1px solid var(--cinnabar);
@@ -40,6 +41,7 @@
   font-size: 14px;
   background: var(--cinnabar);
   text-align: center !important;
+  font-family: var(--font-poppins), sans-serif;
 }
 
 .info {
@@ -64,6 +66,17 @@
 }
 .cardImg {
   width: 100%;
+}
+/* Cards without an image (e.g. animations) take the full width */
+.noImage {
+  justify-content: center !important;
+}
+.noImage .cardInfo {
+  flex-basis: auto;
+  max-width: 700px;
+}
+.noImage .info {
+  text-align: center;
 }
 .cardInfo {
   flex-basis: 50%;

@@ -5,7 +5,7 @@ import * as styles from "../../style/internships.module.css";
 // Card used on the internships and academic projects pages
 function InfoCard({ title, info, image, link }) {
   return (
-    <div className={styles.cardContainer}>
+    <div className={image ? styles.cardContainer : `${styles.cardContainer} ${styles.noImage}`}>
       {image && (
         <div className={styles.cardImg}>
           <div className={styles.Img}>
